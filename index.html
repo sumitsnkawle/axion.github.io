@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axion Consultancy Services</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #203a43; background: #f9f9f9; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #f5f5f5; /* Light background for visibility */
+      padding: 15px 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav img { height: 50px; }
+    nav a { color: #203a43; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #00bcd4; }
+
+    /* Hero Section */
+    header {
+      background: linear-gradient(to right, #e0f7fa, #ffffff); /* Soft light gradient */
+      color: #203a43; /* Dark text for readability */
+      padding: 120px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header img { width: 200px; margin-bottom: 20px; }
+    header h1 { font-size: 3rem; margin-bottom: 20px; animation: fadeInDown 2s; }
+    header p { font-size: 1.2rem; max-width: 700px; margin: auto; animation: fadeInUp 2s; }
+
+    /* Sections */
+    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+    .about, .services, .contact { text-align: center; }
+    .about p { max-width: 800px; margin: 20px auto; font-size: 1.1rem; }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .service-card h3 { margin-bottom: 15px; color: #203a43; }
+
+    /* Contact Form */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact button {
+      padding: 12px;
+      background: #00bcd4;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover { background: #0288a7; }
+
+    /* Footer */
+    footer {
+      background: #f5f5f5; /* Light background */
+      color: #203a43;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      nav { gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation with Logo -->
+  <nav>
+    <img src="logo.png" alt="Axion Consultancy Services Logo">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <img src="logo.png" alt="Axion Consultancy Services Logo">
+    <h1 class="animate__animated animate__fadeInDown">Axion Consultancy Services</h1>
+    <p class="animate__animated animate__fadeInUp">Driving IT excellence worldwide with managed services, software development, and operational innovation.</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>Axion Consultancy Services is led by an experienced IT professional with extensive expertise in IT service management, managed services, and software development. Our leadership has successfully managed large-scale system improvement projects, optimized operations for global clients, and ensured high levels of customer satisfaction.</p>
+    <p>We specialize in ITIL-based operations, Agile and DevOps practices; managed services including incident, change, and problem management; software development and integration across web technologies, databases, and APIs; and team leadership with process improvements and operational excellence.</p>
+    <p>With strong technical proficiency across Windows, Linux, SQL, and cloud environments, our team bridges the gap between technical and business needs. Axion Consultancy drives continuous improvement, innovation, and quality delivery for diverse IT projects worldwide.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Managed IT Services</h3>
+        <p>Proactive monitoring, incident management, change control, and IT operations optimization for businesses worldwide.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Software Development</h3>
+        <p>Custom web and software solutions, API integrations, and enterprise application development tailored to business needs.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>IT Consulting</h3>
+        <p>Advisory services for IT strategy, process improvement, and operational excellence to bridge technical and business goals.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Cloud & Infrastructure</h3>
+        <p>Cloud migration, virtualization, and infrastructure optimization across Windows, Linux, and hybrid environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Axion Consultancy Services. All Rights Reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>
